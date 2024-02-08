@@ -46,6 +46,12 @@ const Products: CollectionConfig = {
       required: true,
     },
     {
+      name: 'stripePriceID',
+      label: 'Stripe Price ID',
+      type: 'text',
+      required: true,
+    },
+    {
       name: 'publishedOn',
       type: 'date',
       admin: {

@@ -140,6 +140,10 @@ export default buildConfig({
               fieldPath: 'name', // this is a field on your own Payload config
               stripeProperty: 'name', // use dot notation, if applicable
             },
+            {
+              fieldPath: 'email', // this is a field on your own Payload config
+              stripeProperty: 'email', // use dot notation, if applicable
+            },
           ],
         },
         {
@@ -150,6 +154,10 @@ export default buildConfig({
             {
               fieldPath: 'name', // this is a field on your own Payload config
               stripeProperty: 'name', // use dot notation, if applicable
+            },
+            {
+              fieldPath: 'price.stripePriceID',
+              stripeProperty: 'default_price',
             },
           ],
         },
