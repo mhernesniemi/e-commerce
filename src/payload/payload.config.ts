@@ -30,7 +30,7 @@ import { priceUpdated } from './stripe/webhooks/priceUpdated'
 import { productUpdated } from './stripe/webhooks/productUpdated'
 
 const generateTitle: GenerateTitle = () => {
-  return 'My Store'
+  return 'Demo Store'
 }
 
 const mockModulePath = path.resolve(__dirname, './emptyModuleMock.js')
@@ -132,7 +132,7 @@ export default buildConfig({
       },
       sync: [
         {
-          collection: 'customers',
+          collection: 'users',
           stripeResourceType: 'customers',
           stripeResourceTypeSingular: 'customer',
           fields: [
