@@ -130,6 +130,30 @@ export default buildConfig({
         'product.updated': productUpdated,
         'price.updated': priceUpdated,
       },
+      sync: [
+        {
+          collection: 'customers',
+          stripeResourceType: 'customers',
+          stripeResourceTypeSingular: 'customer',
+          fields: [
+            {
+              fieldPath: 'name', // this is a field on your own Payload config
+              stripeProperty: 'name', // use dot notation, if applicable
+            },
+          ],
+        },
+        {
+          collection: 'products',
+          stripeResourceType: 'products',
+          stripeResourceTypeSingular: 'product',
+          fields: [
+            {
+              fieldPath: 'name', // this is a field on your own Payload config
+              stripeProperty: 'name', // use dot notation, if applicable
+            },
+          ],
+        },
+      ],
     }),
     redirects({
       collections: ['pages', 'products'],
